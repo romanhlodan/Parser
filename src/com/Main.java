@@ -27,8 +27,8 @@ public class Main {
     }
     public static void Health() throws IOException {
 
-        HashSet<Health> hashSet = new HashSet<>();
-//        ArrayList<Health> health = new ArrayList<>();
+//        HashSet<Health> hashSet = new HashSet<>();
+        ArrayList<Health> health = new ArrayList<>();
         Document doc = Jsoup.connect("https://allegro.pl/kategoria/zdrowie?string=bargain_zone&bmatch=e2101-d3718-c3682-hea-1-2-0304").get();
         Document doc2 = Jsoup.connect("https://allegro.pl/kategoria/zdrowie?string=bargain_zone&bmatch=e2101-d3718-c3682-hea-1-2-0304&p=2").get();
         Document doc3 = Jsoup.connect("https://allegro.pl/kategoria/zdrowie?string=bargain_zone&bmatch=e2101-d3718-c3682-hea-1-2-0304&p=3").get();
@@ -69,22 +69,24 @@ public class Main {
                     Element child5 = aElem4.child(1);
                     Elements elementsByClass = child5.getElementsByClass("mp0t_ji mpof_vs _9c44d_1VS-Y  _9c44d_3_DDQ  mpof_vs _9c44d_2MDwk  ");
 
-                    if (elementsByClass.hasClass("mp0t_ji mpof_vs _9c44d_1VS-Y  _9c44d_3_DDQ  mpof_vs _9c44d_2MDwk  ")){
-                        String text = elements.text();
-                        String text1 = child3.child(0).text();
-                        String text2 = child2.getElementsByClass("m7er_k4 _9c44d_3TzmE").text();
-                        String href = a.attr("href");
+//                    if (elementsByClass.hasClass("mp0t_ji mpof_vs _9c44d_1VS-Y  _9c44d_3_DDQ  mpof_vs _9c44d_2MDwk  ")){
+//                        String text = elements.text();
+//                        String text1 = child3.child(0).text();
+//                        String text2 = child2.getElementsByClass("m7er_k4 _9c44d_3TzmE").text();
+//                        String href = a.attr("href");
+//
+////                        hashSet.add(new Health(text, text1, text2, href));
+////                        hashSet.add(new Health(text,text1,text2,href));
+//
+//                    }
 
-//                        hashSet.add(new Health(text, text1, text2, href));
-                        hashSet.add(new Health(text,text1,text2,href));
+                    health.add(new Health(elements.text(),child3.child(0).text(),child2.getElementsByClass("m7er_k4 _9c44d_3TzmE").text(),a.attr("href")));
+            System.out.println(health);
+//                             for (Health health2 : hashSet) {
+//                                 System.out.println(health2.getTitle());
+////                                 System.out.println(health2);
+//                    }
 
-                    }
-                             for (Health health2 : hashSet) {
-                                 System.out.println(health2.getTitle());
-//                                 System.out.println(health2);
-
-
-                    }
                 }
 
 //_______________________________
