@@ -4,11 +4,13 @@ public class Auto {
     private String title ;
     private String price ;
     private String description;
+    private String url;
 
-    public Auto(String title, String price, String description) {
+    public Auto(String title, String price, String description, String url) {
         this.title = title;
         this.price = price;
         this.description = description;
+        this.url = url;
     }
 
     public String getTitle() {
@@ -35,12 +37,21 @@ public class Auto {
         this.description = description;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     @Override
     public String toString() {
         return "Auto{" +
                 "title='" + title + '\'' +
                 ", price='" + price + '\'' +
                 ", description='" + description + '\'' +
+                ", url='" + url + '\'' +
                 '}';
     }
 }

@@ -4,11 +4,13 @@ public class Health {
     private String title ;
     private String price ;
     private String description;
+    private String url;
 
-    public Health(String title, String price, String description) {
+    public Health(String title, String price, String description, String url) {
         this.title = title;
         this.price = price;
         this.description = description;
+        this.url = url;
     }
 
     public String getTitle() {
@@ -35,12 +37,21 @@ public class Health {
         this.description = description;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     @Override
     public String toString() {
         return "Health{" +
                 "title='" + title + '\'' +
                 ", price='" + price + '\'' +
                 ", description='" + description + '\'' +
+                ", url='" + url + '\'' +
                 '}';
     }
 }

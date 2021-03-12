@@ -3,12 +3,14 @@ package com;
 public class Rtv {
     private String title ;
     private String price ;
-   private String description;
+    private String description;
+    private String url;
 
-    public Rtv(String title, String price, String description) {
+    public Rtv(String title, String price, String description, String url) {
         this.title = title;
         this.price = price;
         this.description = description;
+        this.url = url;
     }
 
     public String getTitle() {
@@ -35,12 +37,21 @@ public class Rtv {
         this.description = description;
     }
 
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
     @Override
     public String toString() {
         return "Rtv{" +
                 "title='" + title + '\'' +
                 ", price='" + price + '\'' +
                 ", description='" + description + '\'' +
+                ", url='" + url + '\'' +
                 '}';
     }
 }
