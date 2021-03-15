@@ -24,9 +24,9 @@ public class Main {
     public static void Health() throws IOException {
 
         ArrayList<Health> health = new ArrayList<>();
-        Document doc = Jsoup.connect("https://allegro.pl/kategoria/zdrowie?string=bargain_zone&bmatch=e2101-d3718-c3682-hea-1-2-0304").get();
-        Document doc2 = Jsoup.connect("https://allegro.pl/kategoria/zdrowie?string=bargain_zone&bmatch=e2101-d3718-c3682-hea-1-2-0304&p=2").get();
-        Document doc3 = Jsoup.connect("https://allegro.pl/kategoria/zdrowie?string=bargain_zone&bmatch=e2101-d3718-c3682-hea-1-2-0304&p=3").get();
+        Document doc = Jsoup.connect("https://allegro.pl/kategoria/zdrowie?string=bargain_zone&bmatch=e2101-d3718-c3682-hea-1-2-0304").userAgent("Chrome/89.0.4389.82").referrer("https://www.google.com.ua/").get();
+        Document doc2 = Jsoup.connect("https://allegro.pl/kategoria/zdrowie?string=bargain_zone&bmatch=e2101-d3718-c3682-hea-1-2-0304&p=2").userAgent("Chrome/89.0.4389.82").referrer("https://www.google.com.ua/").get();
+        Document doc3 = Jsoup.connect("https://allegro.pl/kategoria/zdrowie?string=bargain_zone&bmatch=e2101-d3718-c3682-hea-1-2-0304&p=3").userAgent("Chrome/89.0.4389.82").referrer("https://www.google.com.ua/").get();
 
 
         Elements elem = doc.getElementsByClass("mx7m_1 mnyp_co mlkp_ag");
@@ -179,9 +179,9 @@ public class Main {
     }
     public static void Auto() throws IOException {
         ArrayList<Auto> auto = new ArrayList<>();
-        Document connect = Jsoup.connect("https://allegro.pl/kategoria/motoryzacja?string=bargain_zone&bmatch=cl-e2101-d3718-c3682-aut-1-2-0304").get();
-        Document connect1 = Jsoup.connect("https://allegro.pl/kategoria/motoryzacja?string=bargain_zone&bmatch=cl-e2101-d3718-c3682-aut-1-2-0304&p=2").get();
-        Document connect2 = Jsoup.connect("https://allegro.pl/kategoria/motoryzacja?string=bargain_zone&bmatch=cl-e2101-d3718-c3682-aut-1-2-0304&p=3").get();
+        Document connect = Jsoup.connect("https://allegro.pl/kategoria/motoryzacja?string=bargain_zone&bmatch=cl-e2101-d3718-c3682-aut-1-2-0304").userAgent("Chrome/89.0.4389.82").referrer("https://www.google.com.ua/").get();
+        Document connect1 = Jsoup.connect("https://allegro.pl/kategoria/motoryzacja?string=bargain_zone&bmatch=cl-e2101-d3718-c3682-aut-1-2-0304&p=2").userAgent("Chrome/89.0.4389.82").referrer("https://www.google.com.ua/").get();
+        Document connect2 = Jsoup.connect("https://allegro.pl/kategoria/motoryzacja?string=bargain_zone&bmatch=cl-e2101-d3718-c3682-aut-1-2-0304&p=3").userAgent("Chrome/89.0.4389.82").referrer("https://www.google.com.ua/").get();
 
         Elements elem = connect.getElementsByClass("mx7m_1 mnyp_co mlkp_ag");
         Elements elem1 = connect1.getElementsByClass("mx7m_1 mnyp_co mlkp_ag");
@@ -331,9 +331,9 @@ public class Main {
     public static void RTV () throws IOException {
             ArrayList<Rtv> rtv = new ArrayList<>();
 
-            Document doc = Jsoup.connect("https://allegro.pl/kategoria/rtv-i-agd?bmatch=cl-e2101-d3718-c3682-ele-1-2-0304").get();
-            Document doc1 = Jsoup.connect("https://allegro.pl/kategoria/rtv-i-agd?bmatch=cl-e2101-d3718-c3682-ele-1-2-0304&p=2").get();
-            Document doc2 = Jsoup.connect("https://allegro.pl/kategoria/rtv-i-agd?bmatch=cl-e2101-d3718-c3682-ele-1-2-0304&p=3").get();
+            Document doc = Jsoup.connect("https://allegro.pl/kategoria/rtv-i-agd?bmatch=cl-e2101-d3718-c3682-ele-1-2-0304").userAgent("Chrome/89.0.4389.82").referrer("https://www.google.com.ua/").get();
+            Document doc1 = Jsoup.connect("https://allegro.pl/kategoria/rtv-i-agd?bmatch=cl-e2101-d3718-c3682-ele-1-2-0304&p=2").userAgent("Chrome/89.0.4389.82").referrer("https://www.google.com.ua/").get();
+            Document doc2 = Jsoup.connect("https://allegro.pl/kategoria/rtv-i-agd?bmatch=cl-e2101-d3718-c3682-ele-1-2-0304&p=3").userAgent("Chrome/89.0.4389.82").referrer("https://www.google.com.ua/").get();
 
             Elements Elem = doc.getElementsByClass("mx7m_1 mnyp_co mlkp_ag");
             Elements Elem1 = doc1.getElementsByClass("mx7m_1 mnyp_co mlkp_ag");
@@ -342,7 +342,7 @@ public class Main {
 
                 Element aElem = element.child(0);
                 Element child = aElem.child(1);
-                Elements elements = child.getElementsByClass("mgn2_14 m9qz_yp mqu1_16 mp4t_0 m3_0 mryx_0 munh_0");
+                Elements elements = child.getElementsByClass("mgn2_14 m9qz_yp mqu1_16 mp4t_0 m3h2_0 mryx_0 munh_0");
 
                 Element aElem1 = element.child(0);
                 Element child1 = aElem1.child(1);
@@ -390,7 +390,7 @@ public class Main {
             for (Element element1 : Elem1) {
                 Element aElem = element1.child(0);
                 Element child = aElem.child(1);
-                Elements elements = child.getElementsByClass("mgn2_14 m9qz_yp mqu1_16 mp4t_0 m3_0 mryx_0 munh_0");
+                Elements elements = child.getElementsByClass("mgn2_14 m9qz_yp mqu1_16 mp4t_0 m3h2_0 mryx_0 munh_0");
 
                 Element aElem1 = element1.child(0);
                 Element child1 = aElem1.child(1);
@@ -437,7 +437,7 @@ public class Main {
             for (Element element2 : Elem2) {
                 Element aElem = element2.child(0);
                 Element child = aElem.child(1);
-                Elements elements = child.getElementsByClass("mgn2_14 m9qz_yp mqu1_16 mp4t_0 m3_0 mryx_0 munh_0");
+                Elements elements = child.getElementsByClass("mgn2_14 m9qz_yp mqu1_16 mp4t_0 m3h2_0 mryx_0 munh_0");
 
                 Element aElem1 = element2.child(0);
                 Element child1 = aElem1.child(1);
